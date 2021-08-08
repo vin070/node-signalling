@@ -1,2 +1,5 @@
 #Exclude node_modules folder
 node_modules
+
+#Exclude TLS certificate
+assets/env/
