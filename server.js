@@ -12,6 +12,10 @@ let certificates = {
 
 //start https server and listen on it
 let server = https.createServer(certificates, app).listen(config.PORT);
+app.get("/favicon.ico", function (req, res) {
+  res.sendFile("/assets/images/favicon.ico");
+  res.end();
+});
 
 // create socket.io and bind socket.io to this server
 let io = new Server(server, {
